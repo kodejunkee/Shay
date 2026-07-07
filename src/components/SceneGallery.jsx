@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 
+const baseUrl = import.meta.env.BASE_URL;
 const photos = [
-  { src: '/assets/photos/photo1.jpg', caption: 'One of my favorite smiles.' },
-  { src: '/assets/photos/photo2.jpg', caption: 'A little reminder of how beautiful you are.' },
-  { src: '/assets/photos/photo3.jpg', caption: 'Your light touches everyone around you.' },
-  { src: '/assets/photos/photo4.jpg', caption: 'Effortless grace in every moment.' },
-  { src: '/assets/photos/photo5.jpg', caption: 'Simply you, and that is everything.' }
+  { src: `${baseUrl}assets/photos/photo1.jpg`, caption: 'One of my favorite smiles.' },
+  { src: `${baseUrl}assets/photos/photo2.jpg`, caption: 'A little reminder of how beautiful you are.' },
+  { src: `${baseUrl}assets/photos/photo3.jpg`, caption: 'Your light touches everyone around you.' },
+  { src: `${baseUrl}assets/photos/photo4.jpg`, caption: 'Effortless grace in every moment.' },
+  { src: `${baseUrl}assets/photos/photo5.jpg`, caption: 'Simply you, and that is everything.' }
 ];
 
 export default function SceneGallery() {

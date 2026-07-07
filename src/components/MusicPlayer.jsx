@@ -27,7 +27,7 @@ export default function MusicPlayer({ isPlaying, setIsPlaying }) {
         zIndex: 50,
       }}
     >
-      <audio ref={audioRef} src="/assets/audio/bg-music.mp3" loop />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL}assets/audio/bg-music.mp3`} loop />
       <button 
         onClick={togglePlay}
         className="glass-panel-heavy"

@@ -39,6 +39,7 @@ function Card({ card, index }) {
             height: '100%',
             backfaceVisibility: 'hidden',
             display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: '16px',
@@ -47,6 +48,7 @@ function Card({ card, index }) {
           }}
         >
           <h3 style={{ fontSize: '1.5rem', color: 'var(--color-warm-gold)' }}>✨ {card.title}</h3>
+          <p style={{ marginTop: '1.5rem', fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.05em', fontStyle: 'italic' }}>(tap to reveal)</p>
         </div>
         
         {/* Back */}

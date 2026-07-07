@@ -22,7 +22,7 @@ export default function SceneHero() {
           width: '100%',
           height: '100%',
           y: yBg,
-          backgroundImage: 'url(/assets/photos/hero.jpg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}assets/photos/hero.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.5,
