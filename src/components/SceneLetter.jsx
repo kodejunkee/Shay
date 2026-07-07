@@ -15,7 +15,7 @@ You are kind. Beautiful. Intelligent. Gentle. Thoughtful. Funny. Strong. And abo
 
 Your laughter has a way of making everything feel lighter. Your smile carries a warmth that's impossible to ignore. Your heart is beautiful in ways that words could never truly explain.
 
-Even after writing all of this, it still doesn't feel like enough.
+Even after writing all of this, it still doesn't feel enough.
 
 So instead of trying to come up with the perfect birthday message, I decided to do something a little different.
 
