@@ -5,25 +5,25 @@ const letterContent = `Happy Birthday, Shay.
 
 I sat here for quite a while, trying to write the perfect birthday message for you. I wanted to find words that could somehow capture just how wonderful you are.
 
-But the longer I thought, the more I realized something.
+But the longer I thought, the more I realized...
 
-There aren't enough words.
+There just aren't enough words.
 
-No sentence could ever fully describe the warmth you bring into the lives of the people around you, or the quiet way your smile can brighten even the dullest days.
+No sentence could ever fully describe the warmth you bring, or the quiet way your smile can brighten even the dullest days.
 
-You are kind. Beautiful. Intelligent. Gentle. Thoughtful. Funny. Strong. And somehow, despite all of that, you're still one of the sweetest people I've ever had the privilege of knowing.
+You are kind. Beautiful. Intelligent. Gentle. Thoughtful. Funny. Strong. And above all of that, you're one of the sweetest people I've ever had the privilege of knowing.
 
 Your laughter has a way of making everything feel lighter. Your smile carries a warmth that's impossible to ignore. Your heart is beautiful in ways that words could never truly explain.
 
 Even after writing all of this, it still doesn't feel like enough.
 
-So instead of trying to fit everything I wanted to say into one birthday message, I decided to do something a little different.
+So instead of trying to come up with the perfect birthday message, I decided to do something a little different.
 
-I dedicated this small corner of the internet to you.
+I decided to dedicate this small corner of the internet to you.
 
 A place created for one purpose alone: to celebrate you.
 
-Not because today is your birthday, but because the world became a little brighter the day you were born.
+Not just because today is your birthday, but also because the world became a little brighter the day you were born.
 
 As you step into this new chapter, I hope it brings you endless reasons to smile, unforgettable memories, countless opportunities, and all the happiness your heart can hold.
 
@@ -31,17 +31,17 @@ May this year be kind to you. May your dreams continue to grow. May you never lo
 
 And no matter where life takes you, I hope you always remember just how incredibly special you are.
 
-Happy 20th Birthday, Sunshine.
+Happy 20th Birthday, Shay.
 
-I hope today reminds you of what so many people already know—
+I hope today reminds you of what you already know—
 
-The world is a better place with you in it.
+You are special, beautiful, and the world is a much better place with you in it.
 
 Enjoy every moment of your day. You deserve it.`;
 
 function TypewriterText({ text }) {
   const [displayedText, setDisplayedText] = useState('');
-  
+
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
@@ -49,7 +49,7 @@ function TypewriterText({ text }) {
       i++;
       if (i > text.length) clearInterval(interval);
     }, 40); // typing speed
-    
+
     return () => clearInterval(interval);
   }, [text]);
 
@@ -101,7 +101,7 @@ export default function SceneLetter() {
                 borderTop: '110px solid #DCDCDC',
                 zIndex: 1
               }} />
-              
+
               {/* Wax Seal */}
               <motion.div
                 whileHover={{ scale: 1.1 }}
