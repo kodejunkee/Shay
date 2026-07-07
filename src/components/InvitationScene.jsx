@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { Sparkles } from 'lucide-react';
 
 export default function InvitationScene({ onOpenGift }) {
   const [step, setStep] = useState(0);
@@ -104,7 +105,7 @@ export default function InvitationScene({ onOpenGift }) {
                 transition: 'all 0.3s ease'
               }}
             >
-              ✨ Continue
+              <Sparkles size={18} /> Continue
             </motion.button>
           </motion.div>
         )}
