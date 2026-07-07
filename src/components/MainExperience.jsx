@@ -7,6 +7,8 @@ import SceneLetter from './SceneLetter';
 import SceneWishes from './SceneWishes';
 import SceneEnding from './SceneEnding';
 
+import { EffectFireflies, EffectAurora, EffectStardust, EffectLightLeaks } from './BackgroundAnimations';
+
 export default function MainExperience() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -15,36 +17,47 @@ export default function MainExperience() {
   });
 
   return (
-    <motion.div 
-      ref={containerRef}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
-      style={{
-        width: '100%',
-        position: 'relative'
-      }}
-    >
+    <>
       {/* Background container that can morph based on scroll */}
-      <motion.div
+      <div
         style={{
           position: 'fixed',
           top: 0,
           left: 0,
           width: '100vw',
           height: '100vh',
-          background: 'linear-gradient(to bottom, var(--color-rich-black), var(--color-midnight-purple))',
-          zIndex: -1
+          background: 'var(--color-rich-black)',
+          zIndex: 0,
+          pointerEvents: 'none'
         }}
       />
       
-      <SceneHero />
-      <SceneCards />
-      <SceneGallery />
-      <SceneLetter />
-      <SceneWishes />
-      <SceneEnding />
+      {/* --- BACKGROUND ANIMATIONS --- */}
+      {/* Uncomment one of these at a time to test them! */}
       
-    </motion.div>
+      <EffectFireflies />
+      {/* <EffectAurora /> */}
+      {/* <EffectStardust /> */}
+      {/* <EffectLightLeaks /> */}
+
+      <motion.div 
+        ref={containerRef}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        style={{
+          width: '100%',
+          position: 'relative',
+          zIndex: 10
+        }}
+      >
+        <SceneHero />
+        <SceneCards />
+        <SceneGallery />
+        <SceneLetter />
+        <SceneWishes />
+        <SceneEnding />
+      </motion.div>
+    </>
   );
 }

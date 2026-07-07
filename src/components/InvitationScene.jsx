@@ -71,7 +71,7 @@ export default function InvitationScene({ onOpenGift }) {
               gap: '3rem'
             }}
           >
-            <h1 
+            <h1
               className="text-gradient-aurora"
               style={{
                 fontSize: 'clamp(2rem, 5vw, 4rem)',
@@ -79,9 +79,9 @@ export default function InvitationScene({ onOpenGift }) {
                 lineHeight: 1.2
               }}
             >
-              Happy Birthday, Sunshine ☀️
+              Happy Birthday, Sharon. 🎂
             </h1>
-            
+
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(255,209,102,0.3)' }}
               whileTap={{ scale: 0.95 }}
