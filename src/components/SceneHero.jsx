@@ -74,33 +74,48 @@ export default function SceneHero() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '12px'
+          gap: '8px'
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, delay: 2.5 }}
       >
-        <span style={{ fontSize: '0.7rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+        <span style={{ fontSize: '0.7rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '5px' }}>
           Scroll
         </span>
         
-        {/* Track */}
-        <div style={{ width: '1px', height: '60px', background: 'rgba(255, 255, 255, 0.1)', position: 'relative', overflow: 'hidden' }}>
-          {/* Moving glowing beam */}
-          <motion.div
-            animate={{ y: [-30, 60] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: 'linear' }}
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: '-1px', // center the 3px dot on the 1px line
-              width: '3px',
-              height: '25px',
-              background: 'linear-gradient(to bottom, transparent, var(--color-warm-gold), transparent)',
-              boxShadow: '0 0 10px var(--color-warm-gold)',
-              borderRadius: '50%'
-            }}
-          />
+        {/* Animated Chevrons */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          {[0, 1, 2].map((i) => (
+            <motion.svg 
+              key={i}
+              width="24" 
+              height="14" 
+              viewBox="0 0 24 14" 
+              style={{
+                filter: 'drop-shadow(0 0 8px var(--color-warm-gold))',
+                marginTop: i > 0 ? '-6px' : '0' // Overlap them slightly like the GIF
+              }}
+              animate={{ 
+                opacity: [0.1, 1, 0.1]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                delay: i * 0.2, // Stagger the light up effect
+                ease: "easeInOut"
+              }}
+            >
+              <path 
+                d="M 2 2 L 12 10 L 22 2" 
+                fill="transparent" 
+                stroke="var(--color-warm-gold)" 
+                strokeWidth="3" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+              />
+            </motion.svg>
+          ))}
         </div>
       </motion.div>
     </div>
