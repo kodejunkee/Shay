@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { SunLensFlare, SunCorona, SunPlasma } from './RealisticSuns';
 
 export default function SceneEnding() {
   const particles = Array.from({ length: 40 });
@@ -40,19 +41,12 @@ export default function SceneEnding() {
           />
         ))}
 
-        {/* The Sun */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5, filter: 'blur(20px)' }}
-          whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-          transition={{ duration: 2.5, delay: 3.5, ease: 'easeOut' }}
-          viewport={{ once: true }}
-          style={{
-            fontSize: '5rem',
-            filter: 'drop-shadow(0 0 30px rgba(255, 209, 102, 0.8))'
-          }}
-        >
-          ☀️
-        </motion.div>
+        {/* --- THE SUN --- */}
+        {/* Uncomment one of these at a time to test them! */}
+        
+        <SunLensFlare />
+        {/* <SunCorona /> */}
+        {/* <SunPlasma /> */}
       </div>
 
       <motion.div

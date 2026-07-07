@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 
 export default function SceneWishes() {
   const wishes = [
-    "May this new year bring you as much happiness as you bring to everyone around you.",
+    "May this new year bring you more happiness than you could ever possibly imagine.",
+    "May you grow exceedingly, abundantly, in all areas of life.",
     "May your dreams find you.",
     "May your smile never lose its light."
   ];
@@ -10,7 +11,7 @@ export default function SceneWishes() {
   return (
     <div className="section-container" style={{ position: 'relative', overflow: 'hidden' }}>
       {/* Aurora Background */}
-      <div 
+      <div
         style={{
           position: 'absolute',
           top: 0,
@@ -23,7 +24,7 @@ export default function SceneWishes() {
           animation: 'aurora 10s infinite alternate ease-in-out'
         }}
       />
-      
+
       <div style={{ zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15vh', padding: '10rem 2rem' }}>
         {wishes.map((wish, i) => (
           <motion.p
