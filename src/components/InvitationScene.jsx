@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Play } from 'lucide-react';
+import { CakeNeonSVG, CakeCSS, Cake3DRender } from './RealisticCakes';
 
 export default function InvitationScene({ onOpenGift }) {
   const [step, setStep] = useState(0);
@@ -80,8 +81,15 @@ export default function InvitationScene({ onOpenGift }) {
                 lineHeight: 1.2
               }}
             >
-              Happy Birthday, Sharon. 🎂
+              Happy Birthday, Sharon.
             </h1>
+
+            {/* --- THE CAKE --- */}
+            {/* Uncomment one of these at a time to test them! */}
+            
+            <CakeNeonSVG />
+            {/* <CakeCSS /> */}
+            {/* <Cake3DRender /> */}
 
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(255,209,102,0.3)' }}

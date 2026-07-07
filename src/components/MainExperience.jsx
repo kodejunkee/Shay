@@ -7,7 +7,7 @@ import SceneLetter from './SceneLetter';
 import SceneWishes from './SceneWishes';
 import SceneEnding from './SceneEnding';
 
-import { EffectFireflies, EffectAurora, EffectStardust, EffectLightLeaks } from './BackgroundAnimations';
+import { EffectFireflies } from './BackgroundAnimations';
 
 export default function MainExperience() {
   const containerRef = useRef(null);
@@ -32,13 +32,7 @@ export default function MainExperience() {
         }}
       />
       
-      {/* --- BACKGROUND ANIMATIONS --- */}
-      {/* Uncomment one of these at a time to test them! */}
-      
       <EffectFireflies />
-      {/* <EffectAurora /> */}
-      {/* <EffectStardust /> */}
-      {/* <EffectLightLeaks /> */}
 
       <motion.div 
         ref={containerRef}

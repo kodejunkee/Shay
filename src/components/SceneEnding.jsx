@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { SunLensFlare, SunCorona, SunPlasma } from './RealisticSuns';
+import { SunLensFlare } from './RealisticSuns';
 
 export default function SceneEnding() {
   const particles = Array.from({ length: 40 });
@@ -41,12 +41,7 @@ export default function SceneEnding() {
           />
         ))}
 
-        {/* --- THE SUN --- */}
-        {/* Uncomment one of these at a time to test them! */}
-        
         <SunLensFlare />
-        {/* <SunCorona /> */}
-        {/* <SunPlasma /> */}
       </div>
 
       <motion.div
