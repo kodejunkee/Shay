@@ -8,7 +8,7 @@ export function SunLensFlare() {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 3, delay: 3 }}
+        transition={{ duration: 2.1, delay: 2.1 }}
         style={{
           position: 'absolute',
           width: '300px',
@@ -22,7 +22,7 @@ export function SunLensFlare() {
       <motion.div
         initial={{ opacity: 0, scaleX: 0 }}
         whileInView={{ opacity: 1, scaleX: 1 }}
-        transition={{ duration: 2, delay: 3.5, ease: "easeOut" }}
+        transition={{ duration: 1.4, delay: 2.4, ease: "easeOut" }}
         style={{
           position: 'absolute',
           width: '600px',
@@ -37,7 +37,7 @@ export function SunLensFlare() {
       <motion.div
         initial={{ opacity: 0, scaleY: 0 }}
         whileInView={{ opacity: 0.6, scaleY: 1 }}
-        transition={{ duration: 2, delay: 3.8, ease: "easeOut" }}
+        transition={{ duration: 1.4, delay: 2.6, ease: "easeOut" }}
         style={{
           position: 'absolute',
           width: '2px',
@@ -52,7 +52,7 @@ export function SunLensFlare() {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2, delay: 3.2 }}
+        transition={{ duration: 1.4, delay: 2.2 }}
         style={{
           position: 'absolute',
           width: '60px',
@@ -67,7 +67,7 @@ export function SunLensFlare() {
       <motion.div
         initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{ opacity: 0.4, x: -80, y: 50 }}
-        transition={{ duration: 2, delay: 4 }}
+        transition={{ duration: 1.4, delay: 2.8 }}
         style={{
           position: 'absolute',
           width: '40px',
@@ -79,7 +79,7 @@ export function SunLensFlare() {
       <motion.div
         initial={{ opacity: 0, x: 0, y: 0 }}
         whileInView={{ opacity: 0.2, x: 120, y: -70 }}
-        transition={{ duration: 2, delay: 4.2 }}
+        transition={{ duration: 1.4, delay: 2.9 }}
         style={{
           position: 'absolute',
           width: '80px',

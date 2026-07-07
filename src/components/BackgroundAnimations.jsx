@@ -20,7 +20,7 @@ export function EffectFireflies() {
               enable: true,
               outModes: { default: "out" },
               random: true,
-              speed: 0.6,
+              speed: 0.8,
               straight: false,
             },
             number: { density: { enable: true, area: 800 }, value: 30 },

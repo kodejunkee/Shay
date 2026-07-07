@@ -26,7 +26,7 @@ export default function InvitationScene({ onOpenGift }) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0, scale: 1.1, filter: 'blur(10px)', transition: { duration: 2 } }}
+      exit={{ opacity: 0, scale: 1.1, filter: 'blur(10px)', transition: { duration: 1.4 } }}
       style={{
         width: '100vw',
         height: '100vh',

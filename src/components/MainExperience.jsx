@@ -38,7 +38,7 @@ export default function MainExperience() {
         ref={containerRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.4 }}
         style={{
           width: '100%',
           position: 'relative',

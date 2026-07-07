@@ -25,8 +25,8 @@ export default function SceneEnding() {
               scale: 1
             }}
             transition={{ 
-              duration: 3, 
-              delay: 0.5 + Math.random() * 1.5,
+              duration: 2.1, 
+              delay: 0.35 + Math.random() * 1.05,
               ease: "easeInOut"
             }}
             viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function SceneEnding() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2, delay: 5.5 }}
+        transition={{ duration: 1.4, delay: 3.0 }}
         viewport={{ once: true }}
         style={{ textAlign: 'center' }}
       >

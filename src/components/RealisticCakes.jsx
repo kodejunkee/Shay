@@ -1,6 +1,48 @@
 import { motion } from 'framer-motion';
 
-// --- 1. The Minimalist Neon/Line-Art Cake (SVG + Framer Motion) ---
+// --- Sparkle and Sprinkle helpers ---
+function Sparkle({ cx, cy, s, delay }) {
+  const pathData = `M ${cx} ${cy - s} Q ${cx} ${cy} ${cx + s} ${cy} Q ${cx} ${cy} ${cx} ${cy + s} Q ${cx} ${cy} ${cx - s} ${cy} Q ${cx} ${cy} ${cx} ${cy - s} Z`;
+  return (
+    <motion.path
+      d={pathData}
+      fill="var(--color-warm-gold)"
+      stroke="none"
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ 
+        scale: [0.8, 1.2, 0.8],
+        opacity: [0.3, 1, 0.3]
+      }}
+      transition={{
+        scale: { duration: 2, repeat: Infinity, delay: delay },
+        opacity: { duration: 2, repeat: Infinity, delay: delay }
+      }}
+      style={{ filter: 'drop-shadow(0 0 4px var(--color-warm-gold))' }}
+    />
+  );
+}
+
+function SprinkleDot({ cx, cy, r, delay }) {
+  return (
+    <motion.circle
+      cx={cx}
+      cy={cy}
+      r={r}
+      fill="var(--color-soft-white)"
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ 
+        scale: [0.8, 1.2, 0.8],
+        opacity: [0.2, 0.8, 0.2]
+      }}
+      transition={{
+        scale: { duration: 2.5, repeat: Infinity, delay: delay },
+        opacity: { duration: 2.5, repeat: Infinity, delay: delay }
+      }}
+    />
+  );
+}
+
+// --- Locked-In Cake Component (Base + Sparkles + Base Wave Pattern) ---
 export function CakeNeonSVG() {
   return (
     <div style={{ position: 'relative', width: '120px', height: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -58,7 +100,7 @@ export function CakeNeonSVG() {
             opacity: [0.8, 1, 0.7, 1, 0.8] 
           }}
           transition={{ 
-            scale: { duration: 0.1, delay: 3.5 }, // Initial pop
+            scale: { duration: 0.1, delay: 3.5 },
             default: {
               duration: 2, 
               repeat: Infinity, 
@@ -69,9 +111,35 @@ export function CakeNeonSVG() {
           }}
           style={{ filter: 'drop-shadow(0 0 5px #ff7a00) drop-shadow(0 0 10px #ff2a00)' }}
         />
+
+        {/* --- DECORATIONS: Sparkles & Sprinkles (Option 1) --- */}
+        <Sparkle cx={12} cy={25} s={3.5} delay={4.0} />
+        <Sparkle cx={88} cy={35} s={4.5} delay={4.3} />
+        <Sparkle cx={78} cy={12} s={2.5} delay={4.6} />
+        <SprinkleDot cx={18} cy={48} r={1.2} delay={4.1} />
+        <SprinkleDot cx={84} cy={60} r={1.2} delay={4.4} />
+        <SprinkleDot cx={28} cy={16} r={1.0} delay={4.7} />
+
+        {/* --- DECORATIONS: Base Pattern (Option 3) --- */}
+        <motion.path 
+          d="M 12 65 Q 20 60 30 65 Q 40 70 50 65 Q 60 60 70 65 Q 80 70 88 65" 
+          fill="none" 
+          stroke="var(--color-warm-gold)" 
+          strokeWidth="1.2"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.2, delay: 2.1 }}
+        />
+        <motion.path 
+          d="M 12 72 Q 20 67 30 72 Q 40 77 50 72 Q 60 67 70 72 Q 80 77 88 72" 
+          fill="none" 
+          stroke="var(--color-warm-gold)" 
+          strokeWidth="1.2"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.2, delay: 2.4 }}
+        />
       </svg>
     </div>
   );
 }
-
-
