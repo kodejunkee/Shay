@@ -61,6 +61,48 @@ export default function SceneHero() {
           Happy birthday, Shay.
         </motion.h1>
       </motion.div>
+
+      {/* Custom Scroll Indicator */}
+      <motion.div
+        style={{
+          position: 'absolute',
+          bottom: '8%',
+          left: '50%',
+          x: '-50%',
+          zIndex: 2,
+          opacity: opacityText,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '12px'
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 2.5 }}
+      >
+        <span style={{ fontSize: '0.7rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+          Scroll
+        </span>
+        
+        {/* Track */}
+        <div style={{ width: '1px', height: '60px', background: 'rgba(255, 255, 255, 0.1)', position: 'relative', overflow: 'hidden' }}>
+          {/* Moving glowing beam */}
+          <motion.div
+            animate={{ y: [-30, 60] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: 'linear' }}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: '-1px', // center the 3px dot on the 1px line
+              width: '3px',
+              height: '25px',
+              background: 'linear-gradient(to bottom, transparent, var(--color-warm-gold), transparent)',
+              boxShadow: '0 0 10px var(--color-warm-gold)',
+              borderRadius: '50%'
+            }}
+          />
+        </div>
+      </motion.div>
     </div>
   );
 }
