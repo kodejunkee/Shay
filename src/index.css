@@ -29,6 +29,10 @@ html, body {
   overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Modern standard scrollbar styling (supported on Firefox Mobile, newer iOS Safari 18+) */
+  scrollbar-color: rgba(255, 209, 102, 0.3) var(--color-rich-black);
+  scrollbar-width: thin;
 }
 
 /* Typography Defaults */
